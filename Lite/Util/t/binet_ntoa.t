@@ -51,7 +51,7 @@ for (my $i=0;$i<@num;$i+=2) {
 	unless $len == 16;		# 16 bytes x 8 bits
   &ok;
   my $ipv6x = ipv6_ntoa($bits);
-  print "got: $ipv6x\nexp: $num[$i +1]\nnot "
+  print "# got: $ipv6x\n# exp: $num[$i +1]\n# bits=\"".unpack("H*",$bits)."\" len=$len\nnot "
 	unless $ipv6x eq $num[$i +1];
   &ok;
 }
